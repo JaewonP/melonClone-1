@@ -1,14 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Melon</title>
     <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <link rel="stylesheet" href="./melonClone.css">
 
 </head>
+
 <body>
-    <a href="./melonClone.html" title="MelOn 로고 - 홈으로 이동" class="mlog" data="LOG_PRT_CODE=1&MENU_PRT_CODE=0&MENU_ID_LV1=&CLICK_AREA_PRT_CODE=M01&ACTION_AF_CLICK=V1"><img width="142" height="99" src="https://cdnimg.melon.co.kr/resource/image/web/common/logo_melon142x99.png" alt="MelOn 로고 이미지"/></a>
-    
+    <div id="header">
+        <div id="util_menu">
+            <div class="top_left">
+                <ul>
+                    <li class="first_child">멜론 티켓</li>
+                </ul>
+            </div>
+            <div class="top_right">
+                <ul>
+                    <li class="first_child">이용권구매</li>
+                    <li class="">VIP혜택관</li>
+                    <li class="last_child">이벤트</li>
+                </ul>
+            </div>
+        </div>
+        <h1 id = 'logo-melon'>
+            <a href="./melonClone.html"><img style="display: none-block;" width="142" height="99"
+                    src="./img/logo_melon142x99.png" alt="MelOn 로고 이미지" /></a>
+        </h1>
+        <fieldset id="mainSearchBox">
+            <!-- <legend>검색창</legend> -->
+
+
+            <input id="searchInputBox"type="text" title="검색 입력 편집창" placeholder="" name="" id="top_search" style="width:249px"
+                onkeypress="if(event.keyCode == 13){goSearch();}" />
+        </fieldset>
+        <fieldset class="soaringSearchTerms">
+            <!-- <legend>급상승</legend> -->
+                <div id="soaringSearchImg"><!--<a href="급상승 링크*/"></a>--></div>
+                <div><!--급상승 키워드 올라갈곳--></div>
+        </fieldset>
+
+    </div>
 </body>
+
 </html>

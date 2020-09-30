@@ -1,0 +1,75 @@
+div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr,
+acronym, address, code, del, dfn, em, img, q, dl, dt, dd, ol, ul, li, fieldset,
+form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article,
+aside, dialog, figure, footer, header, hgroup, nav, section {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+body{
+    margin: 0;
+}
+#util_menu{
+    position: relative;
+    width: 1008px;
+    margin: 0;
+    height: 38px;
+    border-top: 4px greenyellow solid;
+    border-bottom: 1px solid gray;
+}
+
+#util_menu .top_left ul li{
+    margin-left: 10px;
+    padding: 9px 0 7px 0;
+    list-style-type: none;
+    float: left;
+}
+#util_menu .top_right ul li{ 
+    list-style-type: none;
+    padding: 9px 0 7px 0;
+    margin-right: 10px;
+    float: right;
+}
+#header{
+    border-bottom : solid 1px gray;
+    position: relative;
+    width: 100%;
+    min-width: 1048px;
+    height: 192px;
+    
+}
+#header #logo-melon{
+    width: 142px;
+    height: 99px;
+    float: left;
+}
+#header #mainSearchBox{
+    display: inline;
+    position: relative;
+    width: 322px !important;
+    height: 40px;
+    margin: 36px 0 0 11px;
+    float: left;
+    background: url('./img/bg_cmn_search322.png') no-repeat;
+    /* 앞으로 튀어나오게 하는 css */
+    z-index: 15; 
+}
+#searchInputBox{
+    margin: 7px 0 0 18px;
+    border: 0;
+    width: 249px;
+    height: 20px;
+    padding: 3px 7px 0 0;
+}
+.soaringSearchTerms {
+    margin-top: 45px;
+    float: left;
+}
+.soaringSearchTerms #soaringSearchImg{
+    width: 42px;
+    height: 16px;
+    background: url('./img/bg_loce_151207.png') no-repeat;
+}
