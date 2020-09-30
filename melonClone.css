@@ -12,24 +12,30 @@ aside, dialog, figure, footer, header, hgroup, nav, section {
 body{
     margin: 0;
 }
+ol, ul, li{
+    list-style: none;
+    font-weight: normal;
+}
+#gnb{
+    height: 137px;;
+}
 #util_menu{
     position: relative;
     width: 1008px;
     margin: 0;
-    height: 38px;
+    height: 33px;
     border-top: 4px greenyellow solid;
     border-bottom: 1px solid gray;
 }
 
 #util_menu .top_left ul li{
     margin-left: 10px;
-    padding: 9px 0 7px 0;
-    list-style-type: none;
+    padding: 7px 0 7px 0;
+    
     float: left;
 }
 #util_menu .top_right ul li{ 
-    list-style-type: none;
-    padding: 9px 0 7px 0;
+    padding: 7px 0 7px 0;
     margin-right: 10px;
     float: right;
 }
@@ -72,4 +78,74 @@ body{
     width: 42px;
     height: 16px;
     background: url('./img/bg_loce_151207.png') no-repeat;
+}
+#gnb_menu{
+    position: relative;
+    height: 55px;
+    z-indedx: 14px;
+    margin-top: 18px;
+}
+#gnb_menu ul{
+    float: left;
+    
+    width: 819px;
+    height: 55px;
+}
+#gnb_menu ul li{
+    margin-left: 30px;
+    float: left;
+    height: 55px;
+}
+#gnb_menu ul li a:link{
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+}
+#gnb_menu ul li a:visited{
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+}
+#gnb_menu ul li a:hover{
+    text-decoration: none;
+    color: rgb(143, 209, 43);
+    cursor: pointer;
+}
+#gnb_menu ul li a:active{
+    text-decoration: none;
+    color: rgb(143, 209, 43);
+    cursor: pointer;
+}
+#gnb_menu #sub_gnb{
+    
+    float: right;
+    width: 158px;
+    margin-right: 30px;
+}
+#gnb_menu #sub_gnb li a:link{
+    color: gray;
+    
+}
+
+/* 여기서 부터 컨텐츠 */
+
+#cont_wrap{
+    margin: 0 auto;
+    background: 0;
+}
+#conts_section{
+    padding: 0 20px;
+    position: relative;
+    width: 1008px;
+    margin: 0 auto;
+}
+.new_album, .event, .id_wrap{
+    border: 1px solid gray;
+}
+.new_album{
+    position: relative;
+    z-index: 5;
+    width: 476px;
+    height: 340px;
+    float: left;
 }

@@ -12,37 +12,89 @@
 
 <body>
     <div id="header">
-        <div id="util_menu">
-            <div class="top_left">
-                <ul>
-                    <li class="first_child">멜론 티켓</li>
-                </ul>
+        <div id="gnb">
+            <div id="util_menu">
+                <div class="top_left">
+                    <ul>
+                        <li class="first_child">멜론 티켓</li>
+                    </ul>
+                </div>
+                <div class="top_right">
+                    <ul>
+                        <li class="first_child">이벤트</li>
+                        <li class="">VIP혜택관</li>
+                        <li class="last_child">이용권 구매</li>
+                    </ul>
+                </div>
             </div>
-            <div class="top_right">
-                <ul>
-                    <li class="first_child">이용권구매</li>
-                    <li class="">VIP혜택관</li>
-                    <li class="last_child">이벤트</li>
-                </ul>
-            </div>
+            <h1 id='logo-melon'>
+                <a href="./melonClone.html"><img style="display: none-block;" width="142" height="99"
+                        src="./img/logo_melon142x99.png" alt="MelOn 로고 이미지" /></a>
+            </h1>
+            <fieldset id="mainSearchBox">
+                <!-- <legend>검색창</legend> -->
+
+
+                <input id="searchInputBox" type="text" title="검색 입력 편집창" placeholder="" name="" id="top_search"
+                    style="width:249px" onkeypress="if(event.keyCode == 13){goSearch();}" />
+            </fieldset>
+            <fieldset class="soaringSearchTerms">
+                <!-- <legend>급상승</legend> -->
+                <div id="soaringSearchImg">
+                    <!--<a href="급상승 링크*/"></a>-->
+                </div>
+                <div>
+                    <!--급상승 키워드 올라갈곳-->
+                </div>
+            </fieldset>
         </div>
-        <h1 id = 'logo-melon'>
-            <a href="./melonClone.html"><img style="display: none-block;" width="142" height="99"
-                    src="./img/logo_melon142x99.png" alt="MelOn 로고 이미지" /></a>
-        </h1>
-        <fieldset id="mainSearchBox">
-            <!-- <legend>검색창</legend> -->
+        <div id="gnb_menu">
+            <ul>
+                <li class="nth1">
+                    <a href=""><span class="menu01">멜론차트</span></a>
+                </li>
+                <li class="nth2">
+                    <a href=""><span class="menu02">최신</span></a>
+                </li>
+                <li class="nth3">
+                    <a href=""><span class="menu03">장르</span></a>
+                </li>
+                <li class="nth4">
+                    <a href=""><span class="menu04">멜론DJ</span></a>
+                </li>
+                <li class="nth5">
+                    <a href=""><span class="menu05">멜론TV</span></a>
+                </li>
+                <li class="nth6">
+                    <a href=""><span class="menu06">스타포스트</span></a>
+                </li>
+                <li class="nth7">
+                    <a href=""><span class="menu07">매거진</span></a>
+                </li>
+                <li class="nth8">
+                    <a href=""><span class="menu08">뮤직어워드</span></a>
+                </li>
+                <li class="nth9">
+                    <a href=""><span class="menu09">멜론Hi-Fi</span></a>
+                </li>
+                <li class="nth10">
+                    <a href=""><span class="menu10">더보기 ▼</span></a>
+                </li>
+            </ul>
+            <ul id="sub_gnb">
+                <li class="nth11"><a href="">마이뮤직</a></li>
+                <li class="nth12"><a href="">피드</a></li>
+            </ul>
+        </div>
 
-
-            <input id="searchInputBox"type="text" title="검색 입력 편집창" placeholder="" name="" id="top_search" style="width:249px"
-                onkeypress="if(event.keyCode == 13){goSearch();}" />
-        </fieldset>
-        <fieldset class="soaringSearchTerms">
-            <!-- <legend>급상승</legend> -->
-                <div id="soaringSearchImg"><!--<a href="급상승 링크*/"></a>--></div>
-                <div><!--급상승 키워드 올라갈곳--></div>
-        </fieldset>
-
+    </div>
+    <!-- 여기까지가 메뉴 -->
+    <div id="conts_section" class="pr_none">
+        <div id="conts" class="clfix">
+            <div class="new_album"></div>
+            <div class="event"></div>
+            <div class="id_wrap"></div>
+        </div>
     </div>
 </body>
 
