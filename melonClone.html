@@ -7,7 +7,34 @@
     <title>Melon</title>
     <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
     <link rel="stylesheet" href="./melonClone.css">
+    <script>
 
+        let realTime = function () {
+
+        }
+        let init = function () {
+
+        }
+        let initEvent = function () {
+            // 버튼 돋보기 호버 이벤트
+            $("button .odd_span").mouseover(function () { 
+                $(this).css({
+                    backgroundPositionY: '-40px'
+                })
+            })
+            $("button .odd_span").mouseleave(function () {
+                $(this).css({
+                    backgroundPositionY: '0'
+                })
+            })
+        }
+
+        $(document).ready(function () {
+
+
+            initEvent();
+        })
+    </script>
 </head>
 
 <body>
@@ -29,14 +56,17 @@
             </div>
             <h1 id='logo-melon'>
                 <a href="./melonClone.html"><img style="display: none-block;" width="142" height="99"
-                        src="./img/logo_melon142x99.png" alt="MelOn 로고 이미지" /></a>
+                        src="./img/dev_img/logo_melon142x99.png" alt="MelOn 로고 이미지" /></a>
             </h1>
             <fieldset id="mainSearchBox">
                 <!-- <legend>검색창</legend> -->
 
 
-                <input id="searchInputBox" type="text" title="검색 입력 편집창" placeholder="" name="" id="top_search"
-                    style="width:249px" onkeypress="if(event.keyCode == 13){goSearch();}" />
+                <input id="searchInputBox" type="text" title="검색 입력 편집창" placeholder="2019년 겨울의 감동 그대로! 김동률 LIVE 앨범!"
+                    name="" id="top_search" style="width:249px" onkeypress="if(event.keyCode == 13){goSearch();}" />
+                <button type="button" class="btn_icon">
+                    <span class="odd_span">검색</span>
+                </button>
             </fieldset>
             <fieldset class="soaringSearchTerms">
                 <!-- <legend>급상승</legend> -->
@@ -91,11 +121,62 @@
     <!-- 여기까지가 메뉴 -->
     <div id="conts_section" class="pr_none">
         <div id="conts" class="clfix">
-            <div class="new_album"></div>
-            <div class="event"></div>
-            <div class="id_wrap"></div>
+            <div class="new_album">
+                <h2><a href="">최신 앨범 ></a></h2>
+            </div>
+            <!-- 이벤트 이미지 슬라이드 -->
+            <div class="event">
+                <div class="event_list">
+                    <a href="" class="slide_link">
+                        <span src="" alt="" class="slide_img" id="slide_img1"></span>
+                    </a>
+                    <a href="" class="slide_link">
+                        <span src="" alt="" class="slide_img" id="slide_img2"></span>
+                    </a>
+                    <a href="" class="slide_link">
+                        <span src="" alt="" class="slide_img" id="slide_img3"></span>
+                    </a>
+                    <a href="" class="slide_link">
+                        <span src="" alt="" class="slide_img" id="slide_img4"></span>
+                    </a>
+                    <a href="" class="slide_link">
+                        <span src="" alt="" class="slide_img" id="slide_img5"></span>
+                    </a>
+                    <a href="" class="slide_link">
+                        <span src="" alt="" class="slide_img" id="slide_img6"></span>
+                    </a>
+                    <a href="" class="slide_link">
+                        <span src="" alt="" class="slide_img" id="slide_img7"></span>
+                    </a>
+                </div>
+            </div>
+            <div class="id_wrap">
+                <div class="login_wrap">
+                    <div class="button_login">
+                        <div class="top_area">
+                            <span class="loginBox_text">멜론을 더 안전하게 이용하세요.</span>
+                            <span id="join"><a href="">회원가입</a></span><br>
+                        </div>
+                        <input id="login_btn" type="button" value="로그인">
+                    </div>
+                </div>
+                <div class="promotion_wrap"></div>
+            </div>
+            <div class="hot_issue">
+                <h2>
+                    <span class="title_link">인기 있어요</span>
+                    <span class="txt_intro">지금 이슈가 되는 아티스트의 인기 컨텐츠 입니다.</span>
+                </h2>
+            </div>
+            <div class="chart">
+                <h2>
+                    <a href="">멜론 차트 ></a>
+                    <span class="txt_intro realtime">2020.09.30 13:00 기준</span>
+                </h2>
+            </div>
         </div>
     </div>
+    <!-- <div id="footer" class="pr_none">Melon clone coding</div> -->
 </body>
 
 </html>

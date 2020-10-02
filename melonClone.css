@@ -9,12 +9,38 @@ aside, dialog, figure, footer, header, hgroup, nav, section {
     font: inherit;
     vertical-align: baseline;
 }
+.new_album, .event,  .hot_issue, .chart, .login_wrap, .promotion_wrap{
+    border: 1px solid gray;
+}
 body{
     margin: 0;
 }
 ol, ul, li{
     list-style: none;
     font-weight: normal;
+}
+a:link, a:visited, a:hover, a:active{
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+}
+button, .btn{
+    border: 1px solid red;
+    display: inline-block;
+    zoom: 1;
+    margin: 0;
+    padding: 0;
+    background: 0;
+    border: 0;
+    text-decoration: none;
+    text-align: center;
+    vertical-align: middle;
+    white-space: nowrap;
+    cursor: pointer;
+}
+.txt_intro{
+    font-size: 12px;
+    color: #888;
 }
 #gnb{
     height: 137px;;
@@ -56,19 +82,30 @@ ol, ul, li{
     display: inline;
     position: relative;
     width: 322px !important;
-    height: 40px;
+    height: 40px !important;
     margin: 36px 0 0 11px;
     float: left;
-    background: url('./img/bg_cmn_search322.png') no-repeat;
+    background: url('./img/dev_img/bg_cmn_search322.png') no-repeat;
     /* 앞으로 튀어나오게 하는 css */
     z-index: 15; 
 }
 #searchInputBox{
-    margin: 7px 0 0 18px;
+    margin: 7px 0 0 16.5px;
     border: 0;
     width: 249px;
     height: 20px;
     padding: 3px 7px 0 0;
+}
+.btn_icon .odd_span{
+    width: 45px;
+    height: 40px;
+    background:url('./img/dev_img/btn_search_bar.png') no-repeat 0 0;
+    vertical-align: top;
+    display: inline-block;
+    overflow: hidden;
+    font-size: 0;
+    line-height: 0;
+    position: relative;
 }
 .soaringSearchTerms {
     margin-top: 45px;
@@ -77,12 +114,12 @@ ol, ul, li{
 .soaringSearchTerms #soaringSearchImg{
     width: 42px;
     height: 16px;
-    background: url('./img/bg_loce_151207.png') no-repeat;
+    background: url('./img/dev_img/bg_loce_151207.png') no-repeat;
 }
 #gnb_menu{
     position: relative;
     height: 55px;
-    z-indedx: 14px;
+    z-index: 14px;
     margin-top: 18px;
 }
 #gnb_menu ul{
@@ -127,7 +164,7 @@ ol, ul, li{
     
 }
 
-/* 여기서 부터 컨텐츠 */
+                                    /* 여기서 부터 컨텐츠 */
 
 #cont_wrap{
     margin: 0 auto;
@@ -139,13 +176,153 @@ ol, ul, li{
     width: 1008px;
     margin: 0 auto;
 }
-.new_album, .event, .id_wrap{
-    border: 1px solid gray;
-}
+
 .new_album{
     position: relative;
     z-index: 5;
     width: 476px;
     height: 340px;
     float: left;
+}
+                                /* 슬라이드 이미지 */
+.event{
+    position: relative;
+    overflow: hidden;
+    height: 315px;
+    width: 236px;
+    padding-top: 24px;
+    margin-left: 4px;
+    float: left;
+}
+
+#slide_img1{
+    position: absolute;
+    width: 236px;
+    height: 315px;
+    background: url('./img/event_img/경서예지.png');
+}
+#slide_img2{
+    position: absolute;
+    width: 236px;
+    height: 315px;
+    background: url('./img/event_img/ASTRO.jpeg');
+}
+#slide_img3{
+    position: absolute;
+    width: 236px;
+    height: 315px;
+    background: url('./img/event_img/OK.png');
+}
+#slide_img4{
+    position: absolute;
+    width: 236px;
+    height: 315px;
+    background: url('./img/event_img/superbee.png');
+}
+#slide_img5{
+    position: absolute;
+    width: 236px;
+    height: 315px;
+    background: url('./img/event_img/넉살.jpeg');
+}
+#slide_img6{
+    position: absolute;
+    width: 236px;
+    height: 315px;
+    background: url('./img/event_img/네이브로.png');
+}
+#slide_img7{
+    position: absolute;
+    width: 236px;
+    height: 315px;
+    background: url('./img/event_img/스웨덴세탁소.png');
+}
+                            
+                            
+.id_wrap{
+    width: 280px;
+    height: 316px;
+    margin-left: 5px;
+    margin-top: 24px !important;
+    float:left;
+}
+.id_wrap .login_wrap{
+    position: relative;
+    width: 280px;
+    height: 119px;
+
+}
+.id_wrap .login_wrap span{
+    font-size: 11px;
+    color: #939393;
+}
+.id_wrap .login_wrap .loginBox_text{
+    float: left;
+}
+.id_wrap .login_wrap #join{
+    float: right;
+}
+.login_wrap .top_area{
+    padding: 24px 0 7px;
+
+}
+.id_wrap .promotion_wrap{
+    position: relative;
+    width: 280px;
+    height: 188px;
+    margin-top: 8px;
+    
+}
+.id_wrap #login_btn{
+    width: 100%;
+    height: 42px;
+    font-size: 14px;
+
+    background-color: #00d344;
+    color: white;
+    border: 0;
+}
+.button_login{
+    height: 115px;
+    padding: 0 17px;
+    background-color:#fbfbfb;
+}
+
+                                    /* 인기 컨텐츠 */
+.hot_issue{
+    clear: both;
+    position: relative;
+    width: 704px;
+    float: left;
+    height: 472px;
+    margin-top: 32px;
+    margin-bottom: 49px;
+
+}
+.hot_issue h2{
+    height: 24px;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.3);
+}
+.hot_issue .title_link{
+    
+    float: left;
+    width: 80px;
+    height: 15px;
+
+}
+.hot_issue .txt_intro{
+    width: 300px;
+    margin-top: 1px;
+    padding-left: 12px;
+    font-size: 12px;
+    color: #888;
+}
+.chart{
+    width:280px;
+    float: left;
+    height: 472px;
+    margin: 32px 0 0 20px;
+}
+.chart .txt_intro{
+    float: right;
 }
