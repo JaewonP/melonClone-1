@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Melon</title>
     <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="./imgSlide.js"></script>
     <link rel="stylesheet" href="./melonClone.css">
     <script>
 
@@ -17,21 +18,20 @@
         }
         let initEvent = function () {
             // 버튼 돋보기 호버 이벤트
-            $("button .odd_span").mouseover(function () { 
+            $("button .odd_span").mouseover(function () {
                 $(this).css({
                     backgroundPositionY: '-40px'
                 })
             })
             $("button .odd_span").mouseleave(function () {
                 $(this).css({
-                    backgroundPositionY: '0'
+                    backgroundPositionY: 0
                 })
             })
         }
 
         $(document).ready(function () {
-
-
+            let rolling = new RollingBanner();
             initEvent();
         })
     </script>
@@ -78,6 +78,7 @@
                 </div>
             </fieldset>
         </div>
+
         <div id="gnb_menu">
             <ul>
                 <li class="nth1">

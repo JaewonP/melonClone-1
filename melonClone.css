@@ -13,6 +13,8 @@ aside, dialog, figure, footer, header, hgroup, nav, section {
     border: 1px solid gray;
 }
 body{
+   
+
     margin: 0;
 }
 ol, ul, li{
@@ -188,11 +190,16 @@ button, .btn{
 .event{
     position: relative;
     overflow: hidden;
-    height: 315px;
+    height: 340px;
     width: 236px;
-    padding-top: 24px;
     margin-left: 4px;
     float: left;
+}
+.event_list{
+    height: 315px;
+    width: 236px;
+    padding-top: 25px;
+    
 }
 
 #slide_img1{
