@@ -12,6 +12,10 @@ aside, dialog, figure, footer, header, hgroup, nav, section {
 .new_album, .event,  .hot_issue, .chart, .login_wrap, .promotion_wrap{
     border: 1px solid gray;
 }
+.wrap{
+    max-width: 1020px;
+    margin: 0 auto;
+}
 body{
    
 
