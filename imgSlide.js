@@ -1,22 +1,31 @@
-function RollingBanner() {
+function RollingBanner(selector,img_width,img_height,direction) {
     //프로퍼티 생성 및 초기화
     this.$slide_img = null;
     this._currentIndex = 0;
+    this.img_width = null;
+    this.img_height = null;
+    this.direction = null;
     //단계 3
     this._timerId = -1;
-    this._init();
+    this._init(selector,img_width,img_height,direction);
     this._initBannerPos();
     //단계3
     this.startAutoPlay();
 
 }
 
-RollingBanner.prototype._init = function () {
-    this.$slide_img = $(".slide_img");
+RollingBanner.prototype._init = function (selector,img_width,img_height,direction) {
+    this.$slide_img = $(selector);
+    this.img_width = img_width;
+    this.img_height = img_height;
+    if(direction === 'RL'){this.direction = 1;}
+    else if(direction === 'LR'){this.direction = -1;}
+    else alert("direction : error!!");
+
 }
 RollingBanner.prototype._initBannerPos = function () {
     //배너위치 보이지 않게
-    this.$slide_img.css("left", "236px");
+    this.$slide_img.css("left", this.img_width);
     //0번째 배너 활성화
     this.$slide_img.eq(this._currentIndex).css("left", 0);
 }
@@ -47,17 +56,13 @@ RollingBanner.prototype.nextBanner = function () {
     let $inBanner = this.$slide_img.eq(this._currentIndex);
 
     $inBanner.css({
-        left: "236px",
-        opacity: 0
+        left: this.direction*this.img_width,
+        opacity: 1
     });
     $outBanner.stop().animate({
-        left: "-236px",
-        opacity: 0
-    }, {
-        duration: 600,
-        step: function (current) {
-        }
-    });
+        left: this.direction*this.img_width*-1,
+        opacity: 1
+    },600);
     $inBanner.stop().animate({
         left: 0,
         opacity: 1

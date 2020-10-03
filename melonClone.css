@@ -190,6 +190,32 @@ button, .btn{
     height: 340px;
     float: left;
 }
+.new_album h2{
+    width: 75px;
+    height:24px;
+    float: left;
+}
+.new_album .wrap_btn{
+    float: right;
+}
+.new_album .wrap_btn .btn_pre{
+    float: left;
+    width: 20px;
+    height: 17px;
+    background: url('./img/dev_img/bg_btn_page02_140716.png') no-repeat;
+    background-position: left -202px !important;
+    font-size : 0;
+    line-height: 0;
+}
+.new_album .wrap_btn .btn_next{
+    float: left;
+    width: 20px;
+    height: 17px;
+    background: url('./img/dev_img/bg_btn_page02_140716.png') no-repeat;
+    background-position: right -202px !important;
+    font-size : 0;
+    line-height: 0;
+}
                                 /* 슬라이드 이미지 */
 .event{
     position: relative;

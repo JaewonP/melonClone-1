@@ -31,7 +31,7 @@
         }
 
         $(document).ready(function () {
-            let rolling = new RollingBanner();
+            let slide_eventBox = new RollingBanner(".slide_img",236,315,"RL");
             initEvent();
         })
     </script>
@@ -127,6 +127,15 @@
         <div id="conts" class="clfix">
             <div class="new_album">
                 <h2><a href="">최신 앨범 ></a></h2>
+                <div class="wrap_page">
+                    <div class="page">
+                        <!-- 이전 다음 버튼 -->
+                        <span class="wrap_btn">
+                            <span class="btn_pre">이전</span>
+                            <span class="btn_next">다음</span>
+                        </span>
+                    </div>
+                </div>
             </div>
             <!-- 이벤트 이미지 슬라이드 -->
             <div class="event">
