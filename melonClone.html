@@ -17,10 +17,13 @@
 
         }
         let initEvent = function () {
+            let slide_eventBox = new RollingBanner(".slide_img", 236, 315, "pre", 2000);
+            slide_eventBox.startAutoPlay("next");
+            let slide_newAlbum = new RollingBanner(".frame_page",480,340,"next");
             // 버튼 돋보기 호버 이벤트
             $("button .odd_span").mouseover(function () {
                 $(this).css({
-                    backgroundPositionY: '-40px'
+                    backgroundPosition:"left -40px"
                 })
             })
             $("button .odd_span").mouseleave(function () {
@@ -28,10 +31,18 @@
                     backgroundPositionY: 0
                 })
             })
+            // 최신 앨범 이전 다음 버튼
+            $(".btn_pre").click(function(){
+                slide_newAlbum.nextBanner("next");
+            })
+            $(".btn_next").click(function(){
+                slide_newAlbum.nextBanner("pre");
+            })
+            
         }
+        
 
         $(document).ready(function () {
-            let slide_eventBox = new RollingBanner(".slide_img",236,315,"RL");
             initEvent();
         })
     </script>
@@ -40,157 +51,201 @@
 <body>
     <div class="wrap">
 
-   
-    <div id="header">
-        <div id="gnb">
-            <div id="util_menu">
-                <div class="top_left">
-                    <ul>
-                        <li class="first_child">멜론 티켓</li>
-                    </ul>
+
+        <div id="header">
+            <div id="gnb">
+                <div id="util_menu">
+                    <div class="top_left">
+                        <ul>
+                            <li class="first_child">멜론 티켓</li>
+                        </ul>
+                    </div>
+                    <div class="top_right">
+                        <ul>
+                            <li class="first_child">이벤트</li>
+                            <li class="">VIP혜택관</li>
+                            <li class="last_child">이용권 구매</li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="top_right">
-                    <ul>
-                        <li class="first_child">이벤트</li>
-                        <li class="">VIP혜택관</li>
-                        <li class="last_child">이용권 구매</li>
-                    </ul>
-                </div>
+                <h1 id='logo-melon'>
+                    <a href="./melonClone.html"><img style="display: none-block;" width="142" height="99"
+                            src="./img/dev_img/logo_melon142x99.png" alt="MelOn 로고 이미지" /></a>
+                </h1>
+                <fieldset id="mainSearchBox">
+                    <!-- <legend>검색창</legend> -->
+
+
+                    <input id="searchInputBox" type="text" title="검색 입력 편집창"
+                        placeholder="2019년 겨울의 감동 그대로! 김동률 LIVE 앨범!" name="" id="top_search" style="width:249px"
+                        onkeypress="if(event.keyCode == 13){goSearch();}" />
+                    <button type="button" class="btn_icon">
+                        <span class="odd_span">검색</span>
+                    </button>
+                </fieldset>
+                <fieldset class="soaringSearchTerms">
+                    <!-- <legend>급상승</legend> -->
+                    <div id="soaringSearchImg">
+                        <!--<a href="급상승 링크*/"></a>-->
+                    </div>
+                    <div>
+                        <!--급상승 키워드 올라갈곳-->
+                    </div>
+                </fieldset>
             </div>
-            <h1 id='logo-melon'>
-                <a href="./melonClone.html"><img style="display: none-block;" width="142" height="99"
-                        src="./img/dev_img/logo_melon142x99.png" alt="MelOn 로고 이미지" /></a>
-            </h1>
-            <fieldset id="mainSearchBox">
-                <!-- <legend>검색창</legend> -->
 
+            <div id="gnb_menu">
+                <ul>
+                    <li class="nth1">
+                        <a href=""><span class="menu01">멜론차트</span></a>
+                    </li>
+                    <li class="nth2">
+                        <a href=""><span class="menu02">최신</span></a>
+                    </li>
+                    <li class="nth3">
+                        <a href=""><span class="menu03">장르</span></a>
+                    </li>
+                    <li class="nth4">
+                        <a href=""><span class="menu04">멜론DJ</span></a>
+                    </li>
+                    <li class="nth5">
+                        <a href=""><span class="menu05">멜론TV</span></a>
+                    </li>
+                    <li class="nth6">
+                        <a href=""><span class="menu06">스타포스트</span></a>
+                    </li>
+                    <li class="nth7">
+                        <a href=""><span class="menu07">매거진</span></a>
+                    </li>
+                    <li class="nth8">
+                        <a href=""><span class="menu08">뮤직어워드</span></a>
+                    </li>
+                    <li class="nth9">
+                        <a href=""><span class="menu09">멜론Hi-Fi</span></a>
+                    </li>
+                    <li class="nth10">
+                        <a href=""><span class="menu10">더보기 ▼</span></a>
+                    </li>
+                </ul>
+                <ul id="sub_gnb">
+                    <li class="nth11"><a href="">마이뮤직</a></li>
+                    <li class="nth12"><a href="">피드</a></li>
+                </ul>
+            </div>
 
-                <input id="searchInputBox" type="text" title="검색 입력 편집창" placeholder="2019년 겨울의 감동 그대로! 김동률 LIVE 앨범!"
-                    name="" id="top_search" style="width:249px" onkeypress="if(event.keyCode == 13){goSearch();}" />
-                <button type="button" class="btn_icon">
-                    <span class="odd_span">검색</span>
-                </button>
-            </fieldset>
-            <fieldset class="soaringSearchTerms">
-                <!-- <legend>급상승</legend> -->
-                <div id="soaringSearchImg">
-                    <!--<a href="급상승 링크*/"></a>-->
-                </div>
-                <div>
-                    <!--급상승 키워드 올라갈곳-->
-                </div>
-            </fieldset>
         </div>
-
-        <div id="gnb_menu">
-            <ul>
-                <li class="nth1">
-                    <a href=""><span class="menu01">멜론차트</span></a>
-                </li>
-                <li class="nth2">
-                    <a href=""><span class="menu02">최신</span></a>
-                </li>
-                <li class="nth3">
-                    <a href=""><span class="menu03">장르</span></a>
-                </li>
-                <li class="nth4">
-                    <a href=""><span class="menu04">멜론DJ</span></a>
-                </li>
-                <li class="nth5">
-                    <a href=""><span class="menu05">멜론TV</span></a>
-                </li>
-                <li class="nth6">
-                    <a href=""><span class="menu06">스타포스트</span></a>
-                </li>
-                <li class="nth7">
-                    <a href=""><span class="menu07">매거진</span></a>
-                </li>
-                <li class="nth8">
-                    <a href=""><span class="menu08">뮤직어워드</span></a>
-                </li>
-                <li class="nth9">
-                    <a href=""><span class="menu09">멜론Hi-Fi</span></a>
-                </li>
-                <li class="nth10">
-                    <a href=""><span class="menu10">더보기 ▼</span></a>
-                </li>
-            </ul>
-            <ul id="sub_gnb">
-                <li class="nth11"><a href="">마이뮤직</a></li>
-                <li class="nth12"><a href="">피드</a></li>
-            </ul>
-        </div>
-
-    </div>
-    <!-- 여기까지가 메뉴 -->
-    <div id="conts_section" class="pr_none">
-        <div id="conts" class="clfix">
-            <div class="new_album">
-                <h2><a href="">최신 앨범 ></a></h2>
-                <div class="wrap_page">
-                    <div class="page">
-                        <!-- 이전 다음 버튼 -->
-                        <span class="wrap_btn">
-                            <span class="btn_pre">이전</span>
-                            <span class="btn_next">다음</span>
+        <!-- 여기까지가 메뉴 -->
+        <div id="conts_section" class="pr_none">
+            <div id="conts" class="clfix">
+                <div class="new_album">
+                    <div class="new_album_top">
+                        <h2><a href="">최신 앨범 ></a></h2>
+                        <div class="wrap_page">
+                            <div class="page">
+                                <!-- 이전 다음 버튼 -->
+                                <span class="wrap_btn">
+                                    <span class="btn_pre">이전</span>
+                                    <span class="btn_next">다음</span>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 여기부터 최신앨범 이미지 -->
+                    <div class="list_wrap">
+                        <span class="frame_page">
+                            <span class="bg_album_frame" id="frame1-1">
+                                <div>하동균</div>
+                            </span>
+                            <span class="bg_album_frame" id="frame1-2">
+                                <div>SOUND PALETTE</div>
+                            </span>
+                            <span class="bg_album_frame" id="frame1-3">
+                                <div>헤이즈문</div>
+                            </span>
+                            <span class="bg_album_frame" id="frame1-4">
+                                <div>EUNGHYUN</div>
+                            </span>
+                            <span class="bg_album_frame" id="frame1-5">
+                                <div>BLACKPINK</div>
+                            </span>
+                            <span class="bg_album_frame" id="frame1-6">
+                                <div>Shawn Mendes</div>
+                            </span>
+                        </span>
+                        <span class="frame_page">
+                            <span class="bg_album_frame" id="frame2-1"><div>류지수</div></span>
+                            <span class="bg_album_frame" id="frame2-2"><div>JOE CHO</div></span>
+                            <span class="bg_album_frame" id="frame2-3"><div>사이드비</div></span>
+                            <span class="bg_album_frame" id="frame2-4"><div>NONE</div></span>
+                            <span class="bg_album_frame" id="frame2-5"><div>Jawsh 685,Jason</div></span>
+                            <span class="bg_album_frame" id="frame2-6"><div>BigDD</div></span>
+                            
+                        </span>
+                        <span class="frame_page">
+                            <span class="bg_album_frame" id="frame3-1"><div>PAXXWORD</div></span>
+                            <span class="bg_album_frame" id="frame3-2"><div>찰리</div></span>
+                            <span class="bg_album_frame" id="frame3-3"><div>Johnny Stimson</div></span>
+                            <span class="bg_album_frame" id="frame3-4"><div>Various Artists</div></span>
+                            <span class="bg_album_frame" id="frame3-5"><div>더 브라더스</div></span>
+                            <span class="bg_album_frame" id="frame3-6"><div>NIGHT MARE</div></span>
+                         
                         </span>
                     </div>
                 </div>
-            </div>
-            <!-- 이벤트 이미지 슬라이드 -->
-            <div class="event">
-                <div class="event_list">
-                    <a href="" class="slide_link">
-                        <span src="" alt="" class="slide_img" id="slide_img1"></span>
-                    </a>
-                    <a href="" class="slide_link">
-                        <span src="" alt="" class="slide_img" id="slide_img2"></span>
-                    </a>
-                    <a href="" class="slide_link">
-                        <span src="" alt="" class="slide_img" id="slide_img3"></span>
-                    </a>
-                    <a href="" class="slide_link">
-                        <span src="" alt="" class="slide_img" id="slide_img4"></span>
-                    </a>
-                    <a href="" class="slide_link">
-                        <span src="" alt="" class="slide_img" id="slide_img5"></span>
-                    </a>
-                    <a href="" class="slide_link">
-                        <span src="" alt="" class="slide_img" id="slide_img6"></span>
-                    </a>
-                    <a href="" class="slide_link">
-                        <span src="" alt="" class="slide_img" id="slide_img7"></span>
-                    </a>
-                </div>
-            </div>
-            <div class="id_wrap">
-                <div class="login_wrap">
-                    <div class="button_login">
-                        <div class="top_area">
-                            <span class="loginBox_text">멜론을 더 안전하게 이용하세요.</span>
-                            <span id="join"><a href="">회원가입</a></span><br>
-                        </div>
-                        <input id="login_btn" type="button" value="로그인">
+                <!-- 이벤트 이미지 슬라이드 -->
+                <div class="event">
+                    <div class="event_list">
+                        <a href="" class="slide_link">
+                            <span src="" alt="" class="slide_img" id="slide_img1"></span>
+                        </a>
+                        <a href="" class="slide_link">
+                            <span src="" alt="" class="slide_img" id="slide_img2"></span>
+                        </a>
+                        <a href="" class="slide_link">
+                            <span src="" alt="" class="slide_img" id="slide_img3"></span>
+                        </a>
+                        <a href="" class="slide_link">
+                            <span src="" alt="" class="slide_img" id="slide_img4"></span>
+                        </a>
+                        <a href="" class="slide_link">
+                            <span src="" alt="" class="slide_img" id="slide_img5"></span>
+                        </a>
+                        <a href="" class="slide_link">
+                            <span src="" alt="" class="slide_img" id="slide_img6"></span>
+                        </a>
+                        <a href="" class="slide_link">
+                            <span src="" alt="" class="slide_img" id="slide_img7"></span>
+                        </a>
                     </div>
                 </div>
-                <div class="promotion_wrap"></div>
-            </div>
-            <div class="hot_issue">
-                <h2>
-                    <span class="title_link">인기 있어요</span>
-                    <span class="txt_intro">지금 이슈가 되는 아티스트의 인기 컨텐츠 입니다.</span>
-                </h2>
-            </div>
-            <div class="chart">
-                <h2>
-                    <a href="">멜론 차트 ></a>
-                    <span class="txt_intro realtime">2020.09.30 13:00 기준</span>
-                </h2>
+                <div class="id_wrap">
+                    <div class="login_wrap">
+                        <div class="button_login">
+                            <div class="top_area">
+                                <span class="loginBox_text">멜론을 더 안전하게 이용하세요.</span>
+                                <span id="join"><a href="">회원가입</a></span><br>
+                            </div>
+                            <input id="login_btn" type="button" value="로그인">
+                        </div>
+                    </div>
+                    <div class="promotion_wrap"></div>
+                </div>
+                <div class="hot_issue">
+                    <h2>
+                        <span class="title_link">인기 있어요</span>
+                        <span class="txt_intro">지금 이슈가 되는 아티스트의 인기 컨텐츠 입니다.</span>
+                    </h2>
+                </div>
+                <div class="chart">
+                    <h2>
+                        <a href="">멜론 차트 ></a>
+                        <span class="txt_intro realtime">2020.09.30 13:00 기준</span>
+                    </h2>
+                </div>
             </div>
         </div>
+        <!-- <div id="footer" class="pr_none">Melon clone coding</div> -->
     </div>
-    <!-- <div id="footer" class="pr_none">Melon clone coding</div> -->
-</div>
 </body>
 
 </html>

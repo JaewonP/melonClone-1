@@ -9,11 +9,12 @@ aside, dialog, figure, footer, header, hgroup, nav, section {
     font: inherit;
     vertical-align: baseline;
 }
-.new_album, .event,  .hot_issue, .chart, .login_wrap, .promotion_wrap{
+/* .new_album,.new_album .list_wrap,.new_album .list_wrap .bg_album_frame, .event,  .hot_issue, .chart, .login_wrap, .promotion_wrap{
     border: 1px solid gray;
-}
+    border-collapse: collapse;
+} */
 .wrap{
-    max-width: 1020px;
+    max-width: 1008px;
     margin: 0 auto;
 }
 body{
@@ -75,7 +76,7 @@ button, .btn{
     border-bottom : solid 1px gray;
     position: relative;
     width: 100%;
-    min-width: 1048px;
+    min-width: 1008px;
     height: 192px;
     
 }
@@ -186,7 +187,7 @@ button, .btn{
 .new_album{
     position: relative;
     z-index: 5;
-    width: 476px;
+    width: 482px;
     height: 340px;
     float: left;
 }
@@ -198,7 +199,7 @@ button, .btn{
 .new_album .wrap_btn{
     float: right;
 }
-.new_album .wrap_btn .btn_pre{
+.btn_pre{
     float: left;
     width: 20px;
     height: 17px;
@@ -207,7 +208,11 @@ button, .btn{
     font-size : 0;
     line-height: 0;
 }
-.new_album .wrap_btn .btn_next{
+.btn_pre:hover{
+    background: url('./img/dev_img/bg_btn_page02_140716.png') no-repeat;
+    background-position: left -220px !important;
+}
+.btn_next{
     float: left;
     width: 20px;
     height: 17px;
@@ -215,6 +220,96 @@ button, .btn{
     background-position: right -202px !important;
     font-size : 0;
     line-height: 0;
+}
+.btn_next:hover{
+    background: url('./img/dev_img/bg_btn_page02_140716.png') no-repeat;
+    background-position: right -220px !important;
+}
+.new_album .new_album_top{
+    width: 480px;
+    height: 25px;
+}
+.new_album .list_wrap{
+    position: relative;
+    overflow: hidden;
+    width: 480px;
+    height: 314px;
+}
+.new_album .list_wrap .bg_album_frame{
+    
+    float: left;
+    margin: 1px;
+    width: 156px;
+    height:156px;
+}
+.frame_page{
+    position: absolute;
+    float: left;
+    width:480px;
+    height: 314px;
+}
+#frame1-1{
+    background: url('./img/new_album_img/10497503_20200928180040_500.jpg') no-repeat;   
+}
+#frame1-2{
+    background: url('./img/new_album_img/10497888_20200929105659_500.jpg') no-repeat;   
+}
+#frame1-3{
+    background: url('./img/new_album_img/10496786_20200928095251_500.jpg') no-repeat;   
+}
+#frame1-4{
+    background: url('./img/new_album_img/10497675_20200928194937_500.jpg') no-repeat;   
+}
+#frame1-5{
+    background: url('./img/new_album_img/10498032_20200929122954_500.jpg') no-repeat;   
+}
+#frame1-6{
+    background: url('./img/new_album_img/10498127_20201002131840_500.jpg') no-repeat;   
+}
+#frame2-1{
+    background: url('./img/new_album_img/10497893_20200929110322_500.jpg') no-repeat;   
+}
+#frame2-2{
+    background: url('./img/new_album_img/10497797_20200929092930_500.jpg') no-repeat;   
+}
+#frame2-3{
+    background: url('./img/new_album_img/10497962_20200929113140_500.jpg') no-repeat;   
+}
+#frame2-4{
+    background: url('./img/new_album_img/10497293_20200928153723_500.jpg') no-repeat;   
+}
+#frame2-5{
+    background: url('./img/new_album_img/10498123_20201002094556_500.jpg') no-repeat;   
+}
+#frame2-6{
+    background: url('./img/new_album_img/10497592_20200928184458_500.jpg') no-repeat;   
+}
+#frame3-1{
+    background: url('./img/new_album_img/10497555_20200928182746_500.jpg') no-repeat;   
+}
+#frame3-2{
+    background: url('./img/new_album_img/10497526_20200928181206_500.jpg') no-repeat;   
+}
+#frame3-3{
+    background: url('./img/new_album_img/10497769_20200928213541_500.jpg') no-repeat;   
+}
+#frame3-4{
+    background: url('./img/new_album_img/10497951_20200929112503_500.jpg') no-repeat;   
+}
+#frame3-5{
+    background: url('./img/new_album_img/10497864_20200929102900_500.jpg') no-repeat;   
+}
+#frame3-6{
+    background: url('./img/new_album_img/10497553_20200928182537_500.jpg') no-repeat;   
+}
+.bg_album_frame div{
+    text-align: center;
+    background-color: rgb(0,0,0,0.5);
+    color: white;
+    height: 25px;
+    width: 156px;
+    padding-top:8px;
+    margin-top: 123px;
 }
                                 /* 슬라이드 이미지 */
 .event{
