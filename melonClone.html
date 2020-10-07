@@ -13,13 +13,15 @@
         let realTime = function () {
 
         }
-        let init1 = function () {
-
+        let init = function () {
+            issueMargin();
         }
         let initEvent = function () {
             let slide_eventBox = new RollingBanner(".slide_img", 236, 315, "pre", 2000);
             slide_eventBox.startAutoPlay("next");
             let slide_newAlbum = new RollingBanner(".frame_page",480,340,"next");
+            let slide_hot_issue = new RollingBanner(".hot_issue .sub_list",704,444,'next');
+            
             // 버튼 돋보기 호버 이벤트
             $("button .odd_span").mouseover(function () {
                 $(this).css({
@@ -32,17 +34,35 @@
                 })
             })
             // 최신 앨범 이전 다음 버튼
-            $(".btn_pre").click(function(){
+            $(".new_album_top .btn_pre").click(function(){
                 slide_newAlbum.nextBanner("next");
             })
-            $(".btn_next").click(function(){
+            $(".new_album_top .btn_next").click(function(){
                 slide_newAlbum.nextBanner("pre");
             })
+            $(".hot_issue .btn_pre").click(function(){
+                slide_hot_issue.nextBanner("next");
+            })
+            $(".hot_issue .btn_next").click(function(){
+                slide_hot_issue.nextBanner("pre");
+            })
             
+        }
+        let issueMargin = function(){
+            console.log(this);
+            $(".issue_list04 .ml0").each(function(index,item){
+                if(index % 3 == 0 ){
+                    $(this).css({
+                        "margin-left" : 0
+                    })
+                }
+                    console.log("this");
+            })
         }
         
 
         $(document).ready(function () {
+            init();
             getTime();
             initEvent();
         })
@@ -235,7 +255,128 @@
                     <h2>
                         <span class="title_link">인기 있어요</span>
                         <span class="txt_intro">지금 이슈가 되는 아티스트의 인기 컨텐츠 입니다.</span>
+                        <!-- 이전 다음 버튼 -->
+                        <span class="wrap_btn">
+                            <span class="btn_pre">이전</span>
+                            <span class="btn_next">다음</span>
+                        </span>
                     </h2>
+                    <ul class="sub_list">
+                        <li class="issue_list04">
+                            <dl class="ml0">
+                                <dd><a href=""><img src="./img/issue/에일리.jpeg" alt=""></a></dd>
+                                <dt><a href=""><span class="title">에일리 [i'm] 자켓 촬영 현장</span>
+                                    <span class="ellipsis">10개월 만의 미니앨범</span></a></dt>
+                                    <dd class="view_no">
+                                        <span class="bar"><a href="">멜론매거진</a></span>
+                                        <sqan class="inquiry"></sqan>
+                                    </dd>
+                            </dl>
+                            <dl class="ml0">
+                                <dd><a href=""><img src="./img/issue/커프.jpeg" alt=""></a></dd>
+                                <dt><a href=""><span class="title">'커프' 모르는 사람은 없을걸...?</span>
+                                    <span class="ellipsis">13년이 지나도 사랑받는 드라마</span></a></dt>
+                                    <dd class="view_no">
+                                        <span class="bar"><a href="">멜론매거진</a></span>
+                                        <sqan class="inquiry"></sqan>
+                                    </dd>
+                            </dl>
+                            <dl class="ml0">
+                                <dd><a href=""><img src="./img/issue/에디반.jpeg" alt=""></a></dd>
+                                <dt><a href=""><span class="title">에디 반 헤일런을 기리며</span>
+                                    <span class="ellipsis">전설이 된 기타리스트</span></a></dt>
+                                    <dd class="view_no">
+                                        <span class="bar"><a href="">멜론DJ</a></span>
+                                        <sqan class="inquiry"></sqan>
+                                    </dd>
+                            </dl>
+                            <dl class="ml0">
+                                <dd><a href=""><img src="./img/issue/누나와따.jpeg" alt=""></a></dd>
+                                <dt><a href=""><span class="title">누나와따! 퀸와사비 본인등판</span>
+                                    <span class="ellipsis">유교걸 (좋아서) 뒤집어짐!</span></a></dt>
+                                    <dd class="view_no">
+                                        <span class="bar"><a href="">멜론TV</a></span>
+                                        <sqan class="inquiry"></sqan>
+                                    </dd>
+                            </dl>
+                            <dl class="ml0">
+                                <dd><a href=""><img src="./img/issue/띵곡.jpeg" alt=""></a></dd>
+                                <dt><a href=""><span class="title">매일 들어도 안질리는 숨듣명 띵곡</span>
+                                    <span class="ellipsis">90년대생 다 모여</span></a></dt>
+                                    <dd class="view_no">
+                                        <span class="bar"><a href="">멜론DJ</a></span>
+                                        <sqan class="inquiry"></sqan>
+                                    </dd>
+                            </dl>
+                            <dl class="ml0">
+                                <dd><a href=""><img src="./img/issue/BAD.jpeg" alt=""></a></dd>
+                                <dt><a href=""><span class="title">BAD TRIP + AKIRA(Feat.개코)</span>
+                                    <span class="ellipsis">삶의 변화를 맞이한 넉살의 새뮤비</span></a></dt>
+                                    <dd class="view_no">
+                                        <span class="bar"><a href="">멜론TV</a></span>
+                                        <sqan class="inquiry"></sqan>
+                                    </dd>
+                            </dl>
+                        </li>
+                    </ul>
+                    <ul class="sub_list">
+                        <li class="issue_list04">
+                            <dl class="ml0">
+                                <dd><a href=""><img src="./img/issue/위아이.jpeg" alt=""></a></dd>
+                                <dt><a href=""><span class="title">위아이 '트와잉라잇'MV</span>
+                                    <span class="ellipsis">'전원 오디션 출신'괴물 신인</span></a></dt>
+                                    <dd class="view_no">
+                                        <span class="bar"><a href="">멜론TV</a></span>
+                                        <sqan class="inquiry"></sqan>
+                                    </dd>
+                            </dl>
+                            <dl class="ml0">
+                                <dd><a href=""><img src="./img/issue/손잡아줄께.jpeg" alt=""></a></dd>
+                                <dt><a href=""><span class="title">SF9'손잡아줄게'MV</span>
+                                    <span class="ellipsis">팬사랑 가득 담긴 팬송</span></a></dt>
+                                    <dd class="view_no">
+                                        <span class="bar"><a href="">멜론TV</a></span>
+                                        <sqan class="inquiry"></sqan>
+                                    </dd>
+                            </dl>
+                            <dl class="ml0">
+                                <dd><a href=""><img src="./img/issue/자라섬.jpeg" alt=""></a></dd>
+                                <dt><a href=""><span class="title">자라섬 재즈 페스티벌</span>
+                                    <span class="ellipsis">라인업 공개, 미리듣기!</span></a></dt>
+                                    <dd class="view_no">
+                                        <span class="bar"><a href="">멜론매거진</a></span>
+                                        <sqan class="inquiry"></sqan>
+                                    </dd>
+                            </dl>
+                            <dl class="ml0">
+                                <dd><a href=""><img src="./img/issue/스웨덴.jpeg" alt=""></a></dd>
+                                <dt><a href=""><span class="title">스웨덴세탁소의 짙은 감성</span>
+                                    <span class="ellipsis">신곡 자켓 촬영 현장!</span></a></dt>
+                                    <dd class="view_no">
+                                        <span class="bar"><a href="">멜론매거진</a></span>
+                                        <sqan class="inquiry"></sqan>
+                                    </dd>
+                            </dl>
+                            <dl class="ml0">
+                                <dd><a href=""><img src="./img/issue/유하.jpeg" alt=""></a></dd>
+                                <dt><a href=""><span class="title">가장 빛나는 별, 유하(YOUHA)</span>
+                                    <span class="ellipsis">"ISLAND" MV 촬영 현장</span></a></dt>
+                                    <dd class="view_no">
+                                        <span class="bar"><a href="">멜론매거진</a></span>
+                                        <sqan class="inquiry"></sqan>
+                                    </dd>
+                            </dl>
+                            <dl class="ml0">
+                                <dd><a href=""><img src="./img/issue/임영웅.jpeg" alt=""></a></dd>
+                                <dt><a href=""><span class="title">트로트계 중심에 선 젊은 피열풍!</span>
+                                    <span class="ellipsis">어깨가 저절로 들썩~</span></a></dt>
+                                    <dd class="view_no">
+                                        <span class="bar"><a href="">멜론매거진</a></span>
+                                        <sqan class="inquiry"></sqan>
+                                    </dd>
+                            </dl>
+                        </li>
+                    </ul>
                 </div>
                 <div class="chart">
                     <h2>

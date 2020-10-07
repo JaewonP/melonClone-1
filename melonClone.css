@@ -26,6 +26,16 @@ ol, ul, li{
     list-style: none;
     font-weight: normal;
 }
+dl{
+    
+    display: block;
+    margin-block-start: 1em;    
+    margin-block-end:   1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+
+
+}
 a:link, a:visited, a:hover, a:active{
     text-decoration: none;
     color: black;
@@ -422,6 +432,7 @@ button, .btn{
 
                                     /* 인기 컨텐츠 */
 .hot_issue{
+    overflow: hidden;
     clear: both;
     position: relative;
     width: 704px;
@@ -429,11 +440,15 @@ button, .btn{
     height: 472px;
     margin-top: 32px;
     margin-bottom: 49px;
+    
 
 }
 .hot_issue h2{
     height: 24px;
     border-bottom: 1px solid rgba(128, 128, 128, 0.3);
+}
+.hot_issue .wrap_btn{
+    float: right;
 }
 .hot_issue .title_link{
     
@@ -448,6 +463,69 @@ button, .btn{
     padding-left: 12px;
     font-size: 12px;
     color: #888;
+}
+.issue_list04{
+    clear: both;
+    width: 704px;
+}
+.sub_list{
+    
+    
+}
+
+.hot_issue .issue_list04 dl{
+    position: relative;
+    margin: 16px 0 2px 16px;
+    float: left;
+}
+ul.sub_list{
+    position: absolute;
+    overflow: hidden;
+    float: left;
+}
+
+.ml0{
+  
+    width: 223px;
+    height: 204px;
+}
+.ml0 dd{
+    float: left;
+    width: 223px;
+    height: 148px;
+
+}
+.ml0 dd img{
+    width: 223px;
+    height: 148px;
+
+}
+.issue_list04 .title {
+    /* display: block; */
+    /* overflow: hidden; */
+    font-size: 12px;
+    height: 16px;
+    font-weight: bold;
+    color: #333;
+    margin-top: 6px;
+    margin-bottom: 2px;
+    word-break: break-all;
+}
+.issue_list04 dl dt a {
+    color: #888;
+    cursor: pointer;
+    font-size: 12px;
+}
+.issue_list04 .ellipsis {
+    display: block;
+    width: 223px;
+    height: 16px;
+    overflow: hidden;
+    word-break: break-all;
+}
+.issue_list04 .view_no a {
+    color: #7cb710;
+    font-size: 11px;
 }
 .chart{
     width:280px;
