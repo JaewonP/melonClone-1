@@ -458,3 +458,8 @@ button, .btn{
 .chart .txt_intro{
     float: right;
 }
+.realtime{
+    color: #888;
+    float: right;
+    font-size: 12px;
+}
