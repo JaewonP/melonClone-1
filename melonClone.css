@@ -527,15 +527,71 @@ ul.sub_list{
     color: #7cb710;
     font-size: 11px;
 }
-.chart{
-    width:280px;
+.chart {
+    width: 280px;
     float: left;
+    margin-left: 24px;
     height: 472px;
-    margin: 32px 0 0 20px;
+    margin-top: 32px;
+}
+.chart h2 {
+    border-bottom: 1px solid #d8ddde;
 }
 .chart .txt_intro{
     float: right;
 }
+.chart .wrap_chart_tab{
+    width: 280px;
+    height: 416px;
+    border: 1px solid rgba(128, 128, 128, 0.2);
+}
+.chart li.on div.list_wrap {
+    display: block;
+}
+.chart .list_wrap {
+    /* display: none; */
+    width: 278px;
+    position: absolute;
+    top: 28px;
+    left: 0;
+    border: 1px solid #dfe6e8;
+    border-width: 0 1px;
+}
+.chart .list_wrap ul {
+    border-top: 1px solid #d8ddde;
+    width: 278px;
+    height: 377px;
+}
+.none {
+    position: absolute;
+    top: -5000em;
+    left: 0;
+    width: 0;
+    height: 0;
+    font-size: 0;
+    line-height: 0;
+    overflow: hidden;
+}
+.chart .list_wrap li.rank_item {
+    background: #fff;
+}
+.chart .list_wrap li {
+    position: relative;
+    width: 278px;
+    height: 33px;
+    border-bottom: 1px solid #e9edef;
+    font-size: 0;
+    line-height: 0;
+}
+
+.chart .list_wrap li.odd {
+    background: #f8f8f8;
+}
+.wrap_chart_tab {
+    position: relative;
+    zoom: 1;
+}
+
 .realtime{
     color: #888;
     float: right;

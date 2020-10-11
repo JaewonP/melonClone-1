@@ -15,6 +15,7 @@
         }
         let init = function () {
             issueMargin();
+            list_wrap_style();
         }
         let initEvent = function () {
             let slide_eventBox = new RollingBanner(".slide_img", 236, 315, "pre", 2000);
@@ -57,6 +58,13 @@
                     })
                 }
                     console.log("this");
+            })
+        }
+        let list_wrap_style = function(){
+            $(".list_wrap .rank_item").each(function(index){
+                if(index % 2 != 0){
+                    $(this).addClass("odd");
+                }
             })
         }
         
@@ -383,6 +391,28 @@
                         <a href="">멜론 차트 ></a>
                         <span class="realtime"></span>
                     </h2>
+                    <div class="wrap_chart_tab">
+                        <span class="none">
+                            <div class="list_wrap">
+                                <ul>
+                                    <li class="rank_item">
+                                    
+                                    </li>
+                                    <li class="rank_item"></li>
+                                    <li class="rank_item"></li>
+                                    <li class="rank_item"></li>
+                                    <li class="rank_item"></li>
+                                    <li class="rank_item"></li>
+                                    <li class="rank_item"></li>
+                                    <li class="rank_item"></li>
+                                    <li class="rank_item"></li>
+                                    <li class="rank_item"></li>
+                                </ul>
+                            </div>
+                        </span>
+                    </div>
+                    
+                    
                 </div>
             </div>
         </div>
